@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 export function isNumber (inputDate) {
   if(isNaN(inputDate)){
+
     return false;
   }
   else{
@@ -20,7 +21,8 @@ export function dayFunc(inputDate) {
 // }
 
 export function display(date) {
-  let outputDay = 'on ' + date + ' The modern calendar day was: ' + dayName(date) + '.';
+  const outputDay = 'on ' + date + ' The modern calendar day was: ' + dayName(date) + '.';
+  return outputDay;
   $('#result').text(outputDay);
 }
 export function dayName (date) {
