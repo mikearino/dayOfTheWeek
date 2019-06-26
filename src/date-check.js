@@ -14,14 +14,14 @@ export function dayFunc(inputDate) {
   return date;
 }
 
-export function getBaseDate(date) {
-  let outputDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
-  return outputDate;
-}
+// export function getBaseDate(date) {
+//   let outputDate = (date.getMonth() + 1) + '/' + (date.getDate() + 1) + '/' + date.getFullYear();
+//   return outputDate;
+// }
 
-export function display(date, outputDate) {
-  let outputDay = 'on ' + outputDate + ' The modern calendar day was: ' + dayName(date) + '.';
-  $('#result').append(outputDay);
+export function display(date) {
+  let outputDay = 'on ' + date + ' The modern calendar day was: ' + dayName(date) + '.';
+  $('#result').text(outputDay);
 }
 export function dayName (date) {
   let day = date.getDay();
