@@ -7,6 +7,7 @@ import { isNumber } from './date-check.js';
 import { dayFunc } from './date-check.js';
 import { getBaseDate } from './date-check.js';
 import { display } from './date-check.js';
+import { dayName } from './date-check.js';
 
 // import { Triangle } from './triangle.js';
 
