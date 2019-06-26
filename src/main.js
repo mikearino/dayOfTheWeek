@@ -2,15 +2,24 @@
 import './styles.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Triangle } from './triangle.js';
+import $ from 'jquery';
+import { isNumber } from './date-check.js';
+import { dayFunc } from './date-check.js';
+import { getBaseDate } from './date-check.js';
+import { display } from './date-check.js';
+
+// import { Triangle } from './triangle.js';
 
 $(document).ready(function () {
-  // $('#ping-pong-form').submit(function (event) {
-  //   event.preventDefault();
-  //   var goal = $('#goal').val();
-  //   var output = pingPong(goal);
-  //   output.forEach(function (element) {
-  //     $('#solution').append('<li>' + element + '</li>');
-  //   });
-  // });
+  $('#date-form').submit(function (event) {
+    event.preventDefault();
+    const date = dayFunc($('#date').val());
+    console.log(date);
+    if(isNumber(date)) {
+      const outputDate = getBaseDate(date)
+      display(date, outputDate)
+    } else {
+      $('#result').text('This is not a number');
+    }
+  });
 });
