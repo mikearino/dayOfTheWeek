@@ -30,7 +30,7 @@ describe('dayFunc', function () {
       it('it should display a string', function () {
         const dayy = new Date('June 26, 2019')
         console.log(dayy);
-        expect(display(dayy).toBe('on Wed Jun 26 2019 00:00:00 GMT-0700 (Pacific Daylight Time) The modern calendar day was: Wednesday.'));
+        expect(display(dayy)).toBe('on Wed Jun 26 2019 00:00:00 GMT-0700 (Pacific Daylight Time) The modern calendar day was: Wednesday.');
 
 
         });

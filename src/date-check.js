@@ -22,8 +22,8 @@ export function dayFunc(inputDate) {
 
 export function display(date) {
   const outputDay = 'on ' + date + ' The modern calendar day was: ' + dayName(date) + '.';
-  return outputDay;
   $('#result').text(outputDay);
+  return outputDay;
 }
 export function dayName (date) {
   let day = date.getDay();
